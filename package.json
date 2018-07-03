@@ -6,9 +6,14 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "webpack-watch": "webpack --config ./node_modules/@vue/cli-service/webpack.config.js --watch",
+    "express": "node index.js",
+    "build-cli": "tsc --lib es2015 --target ES5 cli.ts && nexe --target 8.0.0 -o muc-cli-$(uname)-$(arch) cli.js && rm cli.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
     "vue": "^2.5.16",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.0.0"
@@ -25,7 +30,8 @@
     "nexe": "^2.0.0-rc.30",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.5.16",
+    "webpack-cli": "^3.0.8"
   },
   "browserslist": [
     "> 1%",

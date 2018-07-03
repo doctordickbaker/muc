@@ -27,15 +27,27 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <h3>{{ requestResults + '4398758934578934573498347593485734985' }}</h3>
+    <h3 v-if="results">{{ results }}</h3>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import MucCore from '../lib/muc-core';
 
 @Component
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
+  private results: Array<string|null>|null = null;
+
+  public get requestResults() {
+    const mucCore = new MucCore();
+    mucCore.getAllAsync().then((r) => {
+      this.results = r;
+    });
+    return mucCore.test('sdfsdfsdf');
+  }
 }
 </script>
 
