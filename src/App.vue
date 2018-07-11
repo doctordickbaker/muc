@@ -13,6 +13,8 @@
       </div>
     </section>
 
+    <Muc v-bind:api="getApi"/>
+
     <img src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -20,13 +22,19 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
+import Muc from './components/Muc.vue';
 import MucCore from './lib/muc-core';
 
 export default {
   name: 'app',
   props: ['apiTokens'],
   components: {
-    HelloWorld,
+    HelloWorld, Muc,
+  },
+  methods: {
+    getApi() {
+      return this.api;
+    },
   },
   created() {
     this.api = new MucCore(this.apiTokens);
