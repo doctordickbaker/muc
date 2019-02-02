@@ -31,6 +31,6 @@ export default {
 @import '../assets/scss/variables';
 
 .result-card {
-  background-color: $dark-grey-transclucent !important;
+  
 }
 </style>

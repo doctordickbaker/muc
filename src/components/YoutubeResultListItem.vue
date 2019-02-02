@@ -2,7 +2,7 @@
   <div class="level-item has-text-centered">
     <div>
       <div>
-        <a :href="link" target="_blank"> <i class="fab fa-youtube fa-5x" /> </a>
+        <a :href="link" target="_blank"> <i class="fab fa-youtube fa-2x" /> </a>
       </div>
 
       <ResultListItemButtonBar :link="link" />

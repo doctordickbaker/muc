@@ -1,7 +1,7 @@
 <template>
-  <nav id="top" class="navbar is-dark">
+  <nav id="top" class="navbar">
     <div class="navbar-brand">
-      <p class="navbar-item has-text-weight-light is-size-3">MUC</p>
+      <p class="navbar-item has-text-weight-light is-size-3">Muc</p>
       <!-- <p class="navbar-item is-size-7">Music</p> -->
       <!-- <p class="navbar-item is-size-7">Blog</p> -->
       <p class="navbar-item is-size-7"><a @click="$emit('about')">About</a></p>
@@ -43,10 +43,10 @@ export default {
 @import '../assets/scss/variables';
 
 #top {
-  border-bottom: solid;
+  
 }
 .navbar {
-  background-color: $dark-grey-transclucent !important;
+  background-color: $white !important;
   position: sticky;
   top: 0;
 }
